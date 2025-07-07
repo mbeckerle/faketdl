@@ -2,7 +2,7 @@ name := "dfdl-fakeTDL"
 
 organization := "com.owlcyberdefense"
 
-version := "1.0.2"
+version := "1.0.3"
 
 // for details about DaffodilPlugin settings, see https://github.com/apache/daffodil-sbt
 enablePlugins(DaffodilPlugin)
@@ -11,7 +11,10 @@ daffodilFlatLayout := true
 
 daffodilVersion := daffodilPackageBinVersions.value.head
 
-daffodilPackageBinVersions := Seq("3.10.0", "3.9.0", "3.8.0", "3.7.0", "3.5.0", "3.4.0")
+// note that due to scala 2.13, you can choose either 3.11.0 OR versions up to 3.10.0 (which use scala 2.12)
+daffodilPackageBinVersions := Seq("3.11.0") // Seq("3.10.0", "3.9.0", "3.8.0", "3.7.0", "3.5.0", "3.4.0")
+
+scalaVersion := "2.13.16" // Required for daffodil 3.11.0 as of 2025-07-07
 
 daffodilPackageBinInfos := Seq(
   // schema for a single message
