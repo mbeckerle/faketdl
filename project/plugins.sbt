@@ -1,1 +1,1 @@
-addSbtPlugin("org.apache.daffodil" % "sbt-daffodil" % "1.+")
+addSbtPlugin("org.apache.daffodil" % "sbt-daffodil" % "1+")

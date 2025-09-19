@@ -7,7 +7,7 @@ object TestFakeTDL {
   lazy val runner = Runner("/", "TestFakeTDL.tdml")
 
   @AfterClass def shutDown(): Unit = {
-    runner.reset
+    runner.reset()
   }
 }
 
